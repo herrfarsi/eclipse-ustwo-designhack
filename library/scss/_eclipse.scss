@@ -1,0 +1,58 @@
+$eclipse-background-color: #ecf0f1; 
+$eclipse-color-stage1: #3498db; 
+$eclipse-color-stage2: $primary;
+$eclipse-circle-size: 38px; 
+$eclipse-circle-border-size: 2px; 
+.eclipse-wrapper {
+  z-index: 999; 
+  @include stretch;
+  position: fixed;
+  background: $eclipse-background-color; 
+}
+.eclipse-line-wrapper {
+  @include stretch; 
+  right: 50%;
+  overflow: hidden;
+  @include align(center, left); 
+  .eclipse-line-object {
+    height: 2px; 
+    width: 100%; 
+    background: $eclipse-color-stage1;
+    display: none;
+  }
+}
+.eclipse-circle-wrapper {
+  @include stretch; 
+  @include align; 
+  @include backface-visibility(hidden);
+  .eclipse-circle-object {
+    height: $eclipse-circle-size; 
+    width: $eclipse-circle-size; 
+    border: $eclipse-circle-border-size solid $eclipse-color-stage1;
+    background: $eclipse-background-color;
+    // overflow: hidden;
+    -webkit-mask-image: -webkit-radial-gradient(circle, white, black);
+    @include box-sizing(border-box);
+    @include border-radius(50%);
+  }
+  .eclipse-circle-fill {
+    background: $eclipse-color-stage1;
+    height: 120%;
+    width: 120%; 
+    margin-top: -10%;
+    margin-left: -10%;
+    @include border-radius(50%);
+  }
+}
+// Color change
+.eclipse-line-object, .eclipse-circle-object, .eclipse-circle-fill {
+  @include transition(background 0.1s 0.5s linear, border-color 0.1s 0.3s linear);
+}
+.eclipse-is-stage2 {
+  .eclipse-circle-object {
+    border-color: $eclipse-color-stage2; 
+  }
+  .eclipse-line-object, .eclipse-circle-fill {
+    background: $eclipse-color-stage2; 
+  }
+}

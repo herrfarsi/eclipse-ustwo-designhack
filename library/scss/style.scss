@@ -1,0 +1,46 @@
+// Compass includes 
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/layout/stretching";
+
+@import "mixins", "flex", "variables", "eclipse";
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:100);
+
+html {
+  font: $font-weight #{$font-size}%/#{$line-height} $sans;
+  height: 100%; 
+}
+body {
+  color: $black;
+  background: $primary; 
+  min-height: 100%; 
+  -webkit-font-smoothing: antialiased;
+  @include fs($delta);
+  @include font-feature();
+}
+.content {
+  color: white; 
+  text-align: center;
+  @include backface-visibility(hidden);
+  h1 {
+    font-weight: bold;
+    @include fs(7);
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 100;
+  }
+  p {
+    margin: 10px 0;
+    max-width: 500px;
+    padding: 0 35px; 
+    @include fs(1.8);
+  }
+  .label {
+    text-transform: uppercase;
+    font-weight: bold;
+    @include fs(1.4);
+  }
+}
+.main {
+  @include align;
+}
