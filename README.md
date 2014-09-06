@@ -9,8 +9,8 @@ A two part loader/progress bar brainstormed and developed during three hours of 
 
 #### Collaborators
 The project was a collaboration of the following people:
-- Brett Kalwarski [IntrepidBrett@twitter](https://twitter.com/IntrepidBrett)
-- Camilla Ryd [camillaryd.se](http://camillaryd.se)
-- Daniel Farsi [barbal.se](http://barbal.se)
-- Fredrik Broman [frebro@twitter](https://twitter.com/frebro)
-- Margarida Mouda, [mag@mothervolcano.com]mag@mothervolcano.com
+- Brett Kalwarski, [IntrepidBrett@twitter](https://twitter.com/IntrepidBrett)
+- Camilla Ryd, [camillaryd.se](http://camillaryd.se)
+- Daniel Farsi, [barbal.se](http://barbal.se)
+- Fredrik Broman, [frebro@twitter](https://twitter.com/frebro)
+- Margarida Mouda, [mag@mothervolcano.com](http://mothervolcano.com)
